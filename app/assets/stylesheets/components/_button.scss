@@ -1,0 +1,21 @@
+.btn-primary {
+  color: white;
+  background-color: $color-primary;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+}
+
+.btn-secondary {
+  color: white;
+  background-color: $color-second;
+  border: 1px solid $enlight-1;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: fit-content;
+}
