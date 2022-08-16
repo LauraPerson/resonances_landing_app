@@ -2,11 +2,15 @@ class TermsController < ApplicationController
   
   def edit
     @term = Term.find(params[:id])
+    authorize @term
+
   end
 
   def update
     @term = Term.find(params[:id])
     @term.update(term_params)
+    authorize @term
+
     redirect_to dashboard_path(current_user)
   end
 
