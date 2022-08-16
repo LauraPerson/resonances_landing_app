@@ -11,7 +11,25 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  background-color: $rdark;
+  color: white;
+}
 
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  color: white;
+}
+
+
+.center-element {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
 
 .flex-center {
   display: flex;

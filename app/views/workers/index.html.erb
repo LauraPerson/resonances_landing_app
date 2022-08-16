@@ -1,23 +1,27 @@
-<h1>Workers#index</h1>
 
 <div class="container d-flex flex-column align-items-center">
+  <div class="d-flex justify-content-center w-100">
+    <h1>Membres de Résonances</h1>
+    <%= link_to new_worker_path do %>
+      <div class="btn-primary mx-2">
+        <i class="fa-solid fa-user-plus"></i>
+      </div>
+    <% end %>
+  </div>
   <% @workers.each do |worker| %>
-    <div class="d-flex align-items-center justify-content-between list-card card-gnl">
+    <div class="d-flex align-items-center justify-content-between my-2">
       <div class="d-flex align-items-center">
-        <%# <div class="avatar-small avatar mx-2"> %>
-          <%# <%= avatar(worker) %>
-        <%# </div> %>
+        <div class="avatar mx-2">
+          <%= avatar(worker) %>
+        </div>
+        <%= worker.name %>
         <%= link_to edit_worker_path(worker) do %>
-          <p class="m-0"><%= worker.name %></p>
+          <i class="fa-solid fa-pen-to-square mx-2 edit-destroy-links "></i>
+        <% end %>
+        <%= link_to worker_path(worker), data: {turbo_method: :delete} do %>
+          <i class="fa-solid fa-trash edit-destroy-links"></i>
         <% end %>
       </div>
-      <%= button_to "Supprimer ce membre", worker_path(worker), method: :delete, class:"btn-secondary" %>
-
-    </div>
-  <% end %>
-  <%= link_to new_worker_path do %>
-    <div class="btn-primary">
-      Ajouter un nouveau membre
     </div>
   <% end %>
 </div>

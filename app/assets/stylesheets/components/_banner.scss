@@ -1,0 +1,75 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url('background.png');
+  height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.banner-text {
+  margin-left: 10%;
+  h1 {
+    font-family: $title;
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1;
+  }
+}
+
+.banner #logo {
+  width: 300px;
+
+}
+
+@media screen and (max-width : 1024px) {
+  .banner {
+    height: 512px;
+    background: transparent;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width : 736px) {
+  .banner {
+    height: 368px;
+    background: transparent;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width : 680px) {
+  .banner {
+    height: 340px;
+    background: transparent;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width : 667px) {
+  .banner {
+    height: 333px;
+    background: transparent;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width : 568px) {
+  .banner {
+    display: none;
+  }
+}
+
+@media screen and (max-width : 500px) {
+  .banner {
+    display: none;
+  }
+}
