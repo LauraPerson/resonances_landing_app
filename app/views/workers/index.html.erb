@@ -1,0 +1,23 @@
+<h1>Workers#index</h1>
+
+<div class="container d-flex flex-column align-items-center">
+  <% @workers.each do |worker| %>
+    <div class="d-flex align-items-center justify-content-between list-card card-gnl">
+      <div class="d-flex align-items-center">
+        <%# <div class="avatar-small avatar mx-2"> %>
+          <%# <%= avatar(worker) %>
+        <%# </div> %>
+        <%= link_to edit_worker_path(worker) do %>
+          <p class="m-0"><%= worker.name %></p>
+        <% end %>
+      </div>
+      <%= button_to "Supprimer ce membre", worker_path(worker), method: :delete, class:"btn-secondary" %>
+
+    </div>
+  <% end %>
+  <%= link_to new_worker_path do %>
+    <div class="btn-primary">
+      Ajouter un nouveau membre
+    </div>
+  <% end %>
+</div>

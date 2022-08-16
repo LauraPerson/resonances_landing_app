@@ -1,0 +1,17 @@
+<h1>Clients#index</h1>
+
+<div class="container d-flex flex-column align-items-center">
+  <% @clients.each do |client| %>
+    <div class="d-flex align-items-center justify-content-between list-card card-gnl">
+      <div class="d-flex align-items-center">
+        <p class="m-0"><%= client.name %></p>
+        <%= button_to "Supprimer ce client", client_path(client), method: :delete, class:"btn-secondary" %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to new_client_path do %>
+    <div class="btn-primary">
+      Ajouter un nouveau client
+    </div>
+  <% end %>
+</div>

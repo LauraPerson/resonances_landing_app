@@ -1,5 +1,19 @@
 <h1>Dashboard</h1>
+<h2>Hi <%= current_user.first_name.nil? ? current_user.email : current_user.first_name %></h2>
 <p>Editer le profil</p>
 <%= link_to edit_dashboard_path(current_user) do %>
   <i class="fa-solid fa-pen-to-square mx-2"></i>
 <% end %>
+
+<%= link_to edit_term_path(Term.first) do %>
+  <div class="btn-primary">Modifier les mentions légales</div>
+<% end %>
+
+<%= link_to workers_path do %>
+  <div class="btn-primary">Team</div>
+<% end %>
+
+<%= link_to clients_path do %>
+  <div class="btn-primary">Clients</div>
+<% end %>
+

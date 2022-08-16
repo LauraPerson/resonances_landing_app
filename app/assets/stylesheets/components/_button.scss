@@ -6,6 +6,12 @@
   text-decoration: none;
   display: block;
   width: fit-content;
+  border: 1px solid $color-primary;
+
+}
+
+.btn-primary:hover {
+  border: 1px solid $enlight-1;
 }
 
 .btn-secondary {
