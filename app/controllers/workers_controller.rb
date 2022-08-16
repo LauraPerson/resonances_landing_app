@@ -8,7 +8,6 @@ class WorkersController < ApplicationController
   end
 
   def new 
-    #current_user.super_admin?
     @worker = Worker.new
   end 
 

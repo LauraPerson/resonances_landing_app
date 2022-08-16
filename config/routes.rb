@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :terms, only: [:edit]
   resources :workers
   resources :clients
+  resources :articles
+
 
 
   devise_for :users

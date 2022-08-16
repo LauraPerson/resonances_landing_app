@@ -1,0 +1,23 @@
+
+<div class="container d-flex flex-column align-items-center">
+<h1>Articles#index</h1>
+  <% @articles.each do |article| %>
+    <div class="d-flex align-items-center justify-content-between list-card card-gnl">
+      <div class="d-flex align-items-center">
+        <%# <div class="avatar-small avatar mx-2"> %>
+          <%# <%= avatar(worker) %>
+        <%# </div> %>
+        <%= link_to edit_article_path(article) do %>
+          <p class="m-0"><%= article.title %></p>
+        <% end %>
+      </div>
+      <%= button_to "Supprimer cet article", article_path(article), method: :delete, class:"btn-secondary" %>
+
+    </div>
+  <% end %>
+  <%= link_to new_article_path do %>
+    <div class="btn-primary">
+      Ajouter un nouvel Article
+    </div>
+  <% end %>
+</div>

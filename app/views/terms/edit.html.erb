@@ -1,2 +1,7 @@
-<h1>Terms#edit</h1>
-<p>Find me in app/views/terms/edit.html.erb</p>
+  <div class="container">
+  <h1>Mentions légale</h1>
+    <%= simple_form_for @term, url: edit_term_path(@term) do |f| %>
+      <%= f.input :content, label:"Contenu des mentions légales" %>
+      <%= f.submit "Modifier les mentions légales", class:"btn-primary" %>
+    <% end %>
+  </div>
