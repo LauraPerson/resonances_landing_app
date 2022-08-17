@@ -1,7 +1,21 @@
 .avatar {
   width: 40px;
+  height: 40px;
+  object-fit: cover;
   border-radius: 50%;
 }
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid $color-primary;
+  &:hover {
+    border: 2px solid $enlight-1;
+  }
+}
+
 .avatar-large {
   width: 56px;
   border-radius: 50%;
@@ -17,4 +31,54 @@
   border-radius: 0px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
+}
+
+.avatar-big {
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid $color-primary;
+
+
+ }
+}
+
+#avatar-dash {
+  margin: 0 auto;
+  position: relative;
+  background-position: center;
+}
+
+.avatar-worker {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  &:hover {
+  }
+  .avatar-infos {
+    opacity: 0;
+    transition: .5s ease;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
 }

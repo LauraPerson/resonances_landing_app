@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row flex-center">
+    <div class="col-12 col-m-6 col-xl-4 my-4">
+      <%= simple_form_for @user, url: dashboard_path(@user) do |f| %>
+        <%= f.input :first_name, label:"Prénom" %>
+        <%= f.input :photo, as: :file, label:"Photo de Profil" %>
+        <%= f.submit "Modifier mon profil", class:"btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+  <div class="container">
+    <%= simple_form_for @worker, url: worker_path(@worker) do |f| %>
+      <%= f.input :name, label:"Nom" %>
+      <%= f.input :job, label:"Fonction au sein de Résonances"%>
+      <%= f.input :link, label:"Réseaux sociaux"%>
+      <%= f.input :photo, as: :file, label:"Photo de Profil" %>
+      <%= f.submit "Modifier le profil", class:"btn-primary" %>
+    <% end %>
+  </div>

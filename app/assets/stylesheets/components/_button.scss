@@ -1,0 +1,27 @@
+.btn-primary {
+  color: white;
+  background-color: $color-primary;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  border: 1px solid $color-primary;
+
+}
+
+.btn-primary:hover {
+  border: 1px solid $enlight-1;
+}
+
+.btn-secondary {
+  color: white;
+  background-color: $color-second;
+  border: 1px solid $enlight-1;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: fit-content;
+}

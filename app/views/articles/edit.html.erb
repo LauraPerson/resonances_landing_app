@@ -1,0 +1,18 @@
+<h1>Articles#edit</h1>
+<div class="container">
+  <div class="row flex-center">
+    <div class="col-12 col-m-6 col-xl-4 my-4">
+      <%= simple_form_for @article, url: article_path(@article) do |f| %>
+        <%= f.input :title, label:"Title" %>
+        <%= f.input :subtitle, label:"Sous-Title" %>
+        <%= f.input :content, label:"Contenu" %>
+        <%= f.input :author, label:"Nom de l'auteur" %>
+        <%= f.input :publication_date, label:"Date de publication" %>
+        <%= f.input :source_name, label:"Source de l'article" %>
+        <%= f.input :source_link, label:"Lien de l'article" %>
+        <%= f.input :photo, as: :file, label:"Photo" %>
+        <%= f.submit "Modifier mon article", class:"btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

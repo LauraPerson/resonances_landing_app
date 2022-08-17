@@ -1,0 +1,14 @@
+.edit-destroy-links {
+    color: $color-primary;
+    &:hover {
+      color: $enlight-1;
+    }
+}
+
+#dashboard-btn {
+  width: 50vw;
+  margin: 0 auto;
+  a {
+    margin: 10px;
+  }
+}
