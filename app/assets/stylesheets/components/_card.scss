@@ -7,6 +7,16 @@
   }
 }
 
+.cards-wrap {
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  .client-icon {
+    margin: 10px;
+  }
+}
+
 .card-gnl {
   border-radius: 10px;
   background-color: $rlight;
@@ -46,14 +56,30 @@
     width: 80vw;
     margin: 20px auto;
   }
+  #details {
+    text-align: justify;
+    width: 80vw;
+    margin: 20px auto;
+    a:hover {
+      color: $enlight-1;
+    }
+  }
 }
 
-.card-client-home {
+.card-home {
   img {
     width: 100%;
     height: 100px;
     object-fit: cover;
   }
+}
+
+#cards-article-home {
+  width: 75%;
+}
+
+.card-article-home:hover {
+  border: 1px solid $enlight-1;
 }
 
 
@@ -96,6 +122,10 @@
   .card-20 {
     width: 90vw;
     height: 35vh;
+  }
+
+  #cards-article-home {
+    width: 100%;
   }
   
 }

@@ -10,12 +10,20 @@
   text-align: center;
 }
 
+.client-icon img {
+  width: 20vw;
+  height: 10vh;
+  object-fit: contain;
+}
+
 
 .terms {
   font-size: 10px;
-  margin: 10px;
+  margin: 10% 10px 5% 10px;
   text-align: center;
 }
+
+
 @media (max-width: 1024px) {
   
   

@@ -10,20 +10,19 @@
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
     picture-in-picture" allowfullscreen></iframe>
   </div>
-  <h1 class="border-bottom">Nos clients</h1>
-  <div class="cards w-75 element-center">
+  <h1 class="border-bottom my-3">Nos clients</h1>
+  <div class="cards-wrap center-element">
     <% @clients.each do |client| %>
-    <div class="card-gnl card-client-home card-20">
+    <div class="client-icon">
       <%= photo(client) %>
-      <%= client.name %>
     </div>
     <% end %>
   </div>
-  <h1 class="border-bottom">Nos Articles</h1>
-  <div class="cards w-75 center-element my-3">
+  <h1 class="border-bottom my-3">Nos Articles</h1>
+  <div class="cards center-element my-3" id="cards-article-home">
     <% @last_articles.each do |article| %>
     <%= link_to article_path(article) do %>
-      <div class="card-gnl card-client-home card-20">
+      <div class="card-gnl card-home card-20 card-article-home">
         <%= photo(article) %>
         <%= article.title %>
       </div>

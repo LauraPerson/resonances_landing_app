@@ -9,6 +9,7 @@ class TermsController < ApplicationController
   def update
     @term = Term.find(params[:id])
     @term.update(term_params)
+    flash.alert = "Mentions légales mises à jour"
     authorize @term
     redirect_to dashboard_path(current_user)
   end
