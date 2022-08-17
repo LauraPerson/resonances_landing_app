@@ -4,3 +4,32 @@
     <h1 id="header">Au coeur de l'intelligence collective.</h1>
   </div>
 </div>
+<div class="container">
+  <div id="video">
+    <iframe class="iframe border radius" src="https://www.youtube.com/embed/hVmzj3Ss9Qo" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+    picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <h1 class="border-bottom">Nos clients</h1>
+  <div class="cards w-75 element-center">
+    <% @clients.each do |client| %>
+    <div class="card-gnl card-client-home card-20">
+      <%= photo(client) %>
+      <%= client.name %>
+    </div>
+    <% end %>
+  </div>
+  <h1 class="border-bottom">Nos Articles</h1>
+  <div class="cards w-75 center-element my-3">
+    <% @last_articles.each do |article| %>
+    <%= link_to article_path(article) do %>
+      <div class="card-gnl card-client-home card-20">
+        <%= photo(article) %>
+        <%= article.title %>
+      </div>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="terms"><%= Term.first.content %></div>
+</div>
+

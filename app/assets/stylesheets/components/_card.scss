@@ -48,6 +48,14 @@
   }
 }
 
+.card-client-home {
+  img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+}
+
 
 @media (min-width: 1224px) {
 
