@@ -10,6 +10,28 @@
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
     picture-in-picture" allowfullscreen></iframe>
   </div>
+
+
+  <h1 class="border-bottom my-3">L'équipe</h1>
+
+  <div class="wrapper">
+    <% @workers.each do |worker| %>
+      <% if worker.photo.attached? %>
+        <div class="avatar-worker" style="background-image: url('<%= cl_image_path worker.photo.key %>')">
+          <div class="avatar-infos">
+            <%= worker.name %><br><%= worker.job %>
+          </div>
+        </div>
+      <% else %>
+        <div class="avatar-worker" style="background-image: url('<%= image_path 'default.png' %>')">
+          <div class="avatar-infos">
+            <p><strong><%= worker.name %></strong></p>
+            <p><%= worker.job %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
   <h1 class="border-bottom my-3">Nos clients</h1>
   <div class="cards-wrap center-element">
     <% @clients.each do |client| %>

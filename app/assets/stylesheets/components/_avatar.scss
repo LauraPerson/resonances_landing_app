@@ -52,3 +52,33 @@
   position: relative;
   background-position: center;
 }
+
+.avatar-worker {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  &:hover {
+  }
+  .avatar-infos {
+    opacity: 0;
+    transition: .5s ease;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}

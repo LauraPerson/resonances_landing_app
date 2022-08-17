@@ -24,6 +24,76 @@
 }
 
 
+///////////////////////// Repris d'Hywell \\\\\\\\\\\\\\\\\\\\\\÷
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.conteneur {
+  width: 100%;
+}
+
+.conteneur img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
+.conteneur .profil {
+  color: #FFFFFF;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.conteneur .hover {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.conteneur:hover .hover {
+  opacity: 1;
+}
+
+.conteneur .normal {
+  transition: .5s ease;
+}
+
+.conteneur:hover .normal {
+  opacity: 0;
+}
+
+
+
+// Other Devices 
+
+
+@media (max-width: 1024px) {
+  
+  
+}
+
+@media (max-width: 768px) {
+
+}
+
+
+
 @media (max-width: 1024px) {
   
   
@@ -34,6 +104,12 @@
     width: 50vw;
     min-height: 200px;
   }
+
+  .conteneur .avatar {
+    width: 60%;
+    margin-bottom: 40px
+
+  }
 }
 
 @media (max-width: 400px) {
@@ -42,4 +118,10 @@
     width: 90vw;
     min-height: 200px;
   }
+
+  .conteneur .avatar {
+    width: 50%;
+    margin-bottom: 40px
+  }
+  
 }
