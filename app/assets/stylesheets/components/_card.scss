@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  a:hover {
+    color: white;
+  }
 }
 
 .card-gnl {
@@ -24,8 +27,26 @@
     height: 100px;
     object-fit: cover;
   }
+
 }
 
+.card-hover:hover {
+  border: 1px solid $enlight-1;
+
+}
+
+.card-article {
+  img {
+    width: 80vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  p {
+    text-align: justify;
+    width: 80vw;
+    margin: 20px auto;
+  }
+}
 
 
 @media (min-width: 1224px) {
