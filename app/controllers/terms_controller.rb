@@ -10,7 +10,6 @@ class TermsController < ApplicationController
     @term = Term.find(params[:id])
     @term.update(term_params)
     authorize @term
-
     redirect_to dashboard_path(current_user)
   end
 

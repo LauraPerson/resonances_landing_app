@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row flex-center">
     <div class="col-12 col-m-6 col-xl-4 my-4">
-      <%= simple_form_for @article, url: edit_article_path(@article) do |f| %>
+      <%= simple_form_for @article, url: article_path(@article) do |f| %>
         <%= f.input :title, label:"Title" %>
         <%= f.input :subtitle, label:"Sous-Title" %>
         <%= f.input :content, label:"Contenu" %>

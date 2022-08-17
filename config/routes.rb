@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :dashboard, :controller => 'users', only: [:show, :edit, :update]
-  resources :terms, only: [:edit]
+  resources :terms, only: [:edit, :update]
   resources :workers
   resources :clients
   resources :articles

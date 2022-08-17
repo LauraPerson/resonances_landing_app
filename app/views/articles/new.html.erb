@@ -1,2 +1,18 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<div class="container">
+  <div class="row flex-center">
+    <div class="col-12 col-m-6 col-xl-4 my-4">
+      <h2>Ajouter un nouvel article</h2>
+      <%= simple_form_for @article, url: articles_path, method: :post do |f| %>
+        <%= f.input :title, label:"Title"  %>
+        <%= f.input :subtitle, label:"Sous-Titre"  %>
+        <%= f.input :content, label:"Content"  %>
+        <%= f.input :publication_date, label:"Date de Publication"  %>
+        <%= f.input :author, label:"Auteur"  %>
+        <%= f.input :source_name, label:"Nom de la Source"  %>
+        <%= f.input :source_link, label:"Lien de la Source"  %>
+        <%= f.input :photo, as: :file, label:"Photo de l'article"  %>
+        <%= f.submit "Ajouter un article", class:"btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

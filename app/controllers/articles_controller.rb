@@ -1,6 +1,11 @@
 class ArticlesController < ApplicationController
   def index 
-    @articles = policy_scope(Article.all)
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR content ILIKE :query"
+      @articles = Article.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @articles = Article.all.order(created_at: :desc)
+    end
   end
 
   def new 

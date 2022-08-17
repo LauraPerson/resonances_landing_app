@@ -1,35 +1,35 @@
 <div class="container center-element p-3" id="dashboard-container">
-  <h1>Dashboard</h1>
-  <div class="avatar-big" id="avatar-dash">
-    <%= avatar(current_user) %>
+  <div class="border-bottom w-100 d-flex justify-content-between">
+    <h1 class="">Dashboard</h1>
+    <div class="d-flex justify-content-center align-items-center" id="dashboard-user">
+      <h3>Hello <%= current_user.first_name.nil? ? current_user.email : current_user.first_name %>!</h3>
+      <%= link_to edit_dashboard_path(current_user) do %>
+        <i class="fa-solid fa-pen-to-square mx-2 edit-destroy-links "></i>
+      <% end %>
+      <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
+        <i class="fa-solid fa-right-from-bracket edit-destroy-links "></i>
+      <% end %>
+    </div>
   </div>
-  <div class="d-flex justify-content-center align-items-center" id="dashboard-user">
-    <h3>Hello <%= current_user.first_name.nil? ? current_user.email : current_user.first_name %>!</h3>
-    <%= link_to edit_dashboard_path(current_user) do %>
-      <i class="fa-solid fa-pen-to-square mx-2 edit-destroy-links "></i>
+  <div class="d-flex flex-column align-items-center my-4">
+    <%= link_to edit_term_path(Term.first) do %>
+      <div class="btn-primary my-2">Mentions légales</div>
     <% end %>
-    <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
-      <i class="fa-solid fa-right-from-bracket edit-destroy-links "></i>
-    <% end %>
-  </div>
 
+    <%= link_to workers_path do %>
+      <div class="btn-primary my-2">Team</div>
+    <% end %>
+
+    <%= link_to clients_path do %>
+      <div class="btn-primary my-2">Clients</div>
+    <% end %>
+
+    <%= link_to articles_path do %>
+      <div class="btn-primary my-2">Articles</div>
+    <% end %>
+  </div>
 </div>
 
 
 
-<%= link_to edit_term_path(Term.first) do %>
-  <div class="btn-primary">Modifier les mentions légales</div>
-<% end %>
-
-<%= link_to workers_path do %>
-  <div class="btn-primary">Team</div>
-<% end %>
-
-<%= link_to clients_path do %>
-  <div class="btn-primary">Clients</div>
-<% end %>
-
-<%= link_to articles_path do %>
-  <div class="btn-primary">Articles</div>
-<% end %>
 

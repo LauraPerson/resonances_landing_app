@@ -1,9 +1,9 @@
 class ArticlePolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
-    # def resolve
-    #   scope.all
-    # end
+    def resolve
+      scope.all
+    end
   end
 
   def create?
@@ -19,14 +19,14 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def edit?
-    user == record.user
+    true
   end
 
   def update?
-    user == record.user
+    true
   end
 
   def destroy?
-    user == record.user
+    true
   end
 end

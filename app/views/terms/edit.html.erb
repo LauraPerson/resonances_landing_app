@@ -1,6 +1,6 @@
   <div class="container">
-  <h1>Mentions légale</h1>
-    <%= simple_form_for @term, url: edit_term_path(@term) do |f| %>
+  <h1>Mentions légales</h1>
+    <%= simple_form_for @term, url: term_path(@term) do |f| %>
       <%= f.input :content, label:"Contenu des mentions légales" %>
       <%= f.submit "Modifier les mentions légales", class:"btn-primary" %>
     <% end %>
