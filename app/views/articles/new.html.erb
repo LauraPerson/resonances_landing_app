@@ -5,7 +5,7 @@
       <%= simple_form_for @article, url: articles_path, method: :post do |f| %>
         <%= f.input :title, label:"Title"  %>
         <%= f.input :subtitle, label:"Sous-Titre"  %>
-        <%= f.input :content, label:"Content"  %>
+        <%= f.input :content, as: :rich_text_area, label:"Content"  %>
         <%= f.input :publication_date, label:"Date de Publication"  %>
         <%= f.input :author, label:"Auteur"  %>
         <%= f.input :source_name, label:"Nom de la Source"  %>
