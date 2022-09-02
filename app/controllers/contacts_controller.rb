@@ -8,6 +8,8 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     @contact.request = request
+    authorize @contact
+
     if @contact.deliver
       flash.alert = "Message envoyé!"
       redirect_to root_path
