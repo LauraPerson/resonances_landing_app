@@ -12,7 +12,7 @@
   </div>
 
 
-  <h1 class="border-bottom my-3">L'équipe</h1>
+  <h1 class="border-bottom title-section">L'équipe</h1>
 
   <div class="wrapper">
     <% @workers.each do |worker| %>
@@ -22,6 +22,7 @@
             <%= worker.name %><br><%= worker.job %>
           </div>
         </div>
+
       <% else %>
         <div class="avatar-worker" style="background-image: url('<%= image_path 'default.png' %>')">
           <div class="avatar-infos">
@@ -32,7 +33,7 @@
       <% end %>
     <% end %>
   </div>
-  <h1 class="border-bottom my-3">Nos clients</h1>
+  <h1 class="border-bottom title-section">Nos clients</h1>
   <div class="cards-wrap center-element">
     <% @clients.each do |client| %>
     <div class="client-icon">
@@ -40,7 +41,7 @@
     </div>
     <% end %>
   </div>
-  <h1 class="border-bottom my-3">Nos Articles</h1>
+  <h1 class="border-bottom title-section">Nos Articles</h1>
   <div class="cards center-element my-3" id="cards-article-home">
     <% @last_articles.each do |article| %>
     <%= link_to article_path(article) do %>
@@ -51,6 +52,9 @@
     <% end %>
     <% end %>
   </div>
+  <h1 class="border-bottom title-section">Contactez-nous</h1>
+  <%= render 'form' %>
+
   <div class="terms"><%= Term.first.content %></div>
 </div>
 

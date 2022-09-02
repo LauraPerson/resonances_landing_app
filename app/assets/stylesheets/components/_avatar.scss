@@ -82,3 +82,35 @@
     }
   }
 }
+
+
+
+@media (min-width: 1224px) {
+
+
+}
+
+@media (max-width: 1024px) {
+
+
+
+}
+
+@media (max-width: 768px) {
+
+  
+}
+
+@media (max-width: 480px) {
+
+  .avatar-worker {
+    width: 80px;
+    height: 80px;
+    
+    .avatar-infos {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+}
