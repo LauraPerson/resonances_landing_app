@@ -1,18 +1,20 @@
-  <div class="container center-element">
+  <div class="container">
     <div class="card-article">
-      <%= photo(@article) %>
-        <h2 class="m-4"><%= @article.title %></h2>
-        <h4><%= @article.subtitle %></h4>
-        <div class="d-flex justify-content-between" id="details">
-          <%= @article.author.present? ? "Article de #{@article.author}" : nil %>
-          <% if @article.source_link %>
-            <%= link_to @article.source_link do %>
-              <%= @article.source_name %>
+      <div class="center-element">
+        <%= photo(@article) %>
+          <h2 class="m-4"><%= @article.title %></h2>
+          <h4><%= @article.subtitle %></h4>
+          <div class="d-flex justify-content-between" id="details">
+            <%= @article.author.present? ? "Article de #{@article.author}" : nil %>
+            <% if @article.source_link %>
+              <%= link_to @article.source_link do %>
+                <%= @article.source_name %>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
         </div>
-      <div>
-        <p class="article-content"><%= @article.content %></p>
+      <div id="article-content">
+        <p><%= @article.content %></p>
       </div>
     </div>
   </div>

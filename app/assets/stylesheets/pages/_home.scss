@@ -123,5 +123,14 @@
     width: 50%;
     margin-bottom: 40px
   }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    .avatar-worker {
+      margin: 0 auto;
+    }
+  }
   
 }

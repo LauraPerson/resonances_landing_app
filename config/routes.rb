@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :clients
   resources :articles
 
+  resources :contacts, only: [:new, :create]
+
+
 
 
   devise_for :users
