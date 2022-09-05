@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row flex-center">
+    <div class="col-12 col-m-6 col-xl-4 my-4">
+      <h2>Ajouter un nouveau concept</h2>
+      <%= simple_form_for @concept, url: concepts_path, method: :post do |f| %>
+        <%= f.input :description, as: :rich_text_area, label:"Description"  %>
+        <%= f.input :photo, as: :file, label:"Photo du concept"  %>
+        <%= f.submit "Ajouter un concept", class:"btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

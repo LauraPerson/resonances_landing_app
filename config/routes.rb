@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get 'concepts/new'
+  get 'concepts/edit'
 
   resources :dashboard, :controller => 'users', only: [:show, :edit, :update]
   resources :terms, only: [:edit, :update]
   resources :workers
   resources :clients
   resources :articles
+  resources :concepts
 
   resources :contacts, only: [:new, :create]
 
