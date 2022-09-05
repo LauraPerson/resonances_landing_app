@@ -28,7 +28,7 @@
 
 @media screen and (max-width : 1024px) {
   .banner {
-    height: 512px;
+    height: 100vh;
     background: transparent;
     flex-direction: column;
     justify-content: center;
@@ -37,24 +37,17 @@
 
 @media screen and (max-width : 736px) {
   .banner {
-    height: 368px;
+    height: 100vh;
     background: transparent;
     flex-direction: column;
     justify-content: center;
   }
 }
 
-@media screen and (max-width : 680px) {
-  .banner {
-    height: 340px;
-    background: transparent;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
+
 @media screen and (max-width : 667px) {
   .banner {
-    height: 333px;
+    height: 100vh;
     background: transparent;
     flex-direction: column;
     justify-content: center;
@@ -62,13 +55,21 @@
 }
 
 @media screen and (max-width : 568px) {
-  .banner {
-    display: none;
+  .banner #logo {
+    width: 200px;
+  }
+
+  .banner #header {
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width : 500px) {
-  .banner {
-    display: none;
+  .banner #logo {
+    width: 200px;
+  }
+
+  .banner #header {
+    font-size: 20px;
   }
 }

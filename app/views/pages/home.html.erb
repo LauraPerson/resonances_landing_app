@@ -41,7 +41,15 @@
     </div>
     <% end %>
   </div>
-  <h1 class="border-bottom title-section">Nos Articles</h1>
+  <div class="d-flex border-bottom title-section justify-content-between align-items-center">
+    <h1 class="">Nos Articles</h1>
+    <%= link_to articles_path do %>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="m-0"> Voir tous nos articles</p>
+        <i class="fa-solid fa-arrow-right mx-1"></i>
+      </div>
+    <% end %>
+  </div>
   <div class="cards center-element my-3" id="cards-article-home">
     <% @last_articles.each do |article| %>
     <%= link_to article_path(article) do %>

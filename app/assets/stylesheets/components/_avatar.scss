@@ -66,6 +66,7 @@
   text-align: center;
   &:hover {
   }
+  
   .avatar-infos {
     opacity: 0;
     transition: .5s ease;
@@ -92,12 +93,29 @@
 
 @media (max-width: 1024px) {
 
-
+  .avatar-worker {
+    width: 150px;
+    height: 150px;
+    
+    .avatar-infos {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
 
 }
 
 @media (max-width: 768px) {
-
+  .avatar-worker {
+    width: 100px;
+    height: 100px;
+    
+    .avatar-infos {
+      width: 100px;
+      height: 100px;
+    }
+  }
   
 }
 
