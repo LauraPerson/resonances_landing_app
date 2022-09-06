@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 .iframe {
-  width: 50vw;
-  height: 100%;
+  width: 100%;
+  height: 70vh;
   min-height: 300px;
   margin: 0 auto;
 }
@@ -22,6 +22,41 @@
   margin: 10% 10px 5% 10px;
   text-align: center;
 }
+
+
+.carousel-inner {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item {
+  font-size: 20px;
+}
+
+
+/////////////// activité
+/// 
+
+.activity-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.grid-activity-item {
+  text-align: center;
+  width: 25vw;
+  margin: 0 auto;
+  img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+  }
+}
+
 
 
 ///////////////////////// Repris d'Hywell \\\\\\\\\\\\\\\\\\\\\\÷
@@ -139,6 +174,19 @@
 
   #all-article {
     display: none;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-activity-item {
+    width: 100%;
+    img {
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+    }
   }
   
 }

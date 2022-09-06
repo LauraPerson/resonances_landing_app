@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'activities/edit'
+  get 'activities/index'
+  get 'activities/new'
   get 'concepts/new'
   get 'concepts/edit'
 
@@ -8,6 +11,9 @@ Rails.application.routes.draw do
   resources :clients
   resources :articles
   resources :concepts
+  resources :activities
+  resources :benefits
+
 
   resources :contacts, only: [:new, :create]
 

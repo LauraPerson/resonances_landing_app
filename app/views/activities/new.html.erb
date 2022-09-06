@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row flex-center">
+    <div class="col-12 col-m-6 col-xl-4 my-4">
+      <h2>Ajouter une nouvelle activité</h2>
+      <%= simple_form_for @activity, url: activities_path, method: :post do |f| %>
+        <%= f.input :title, label:"Titre de l'activité"  %>
+        <%= f.input :description, as: :rich_text_area, label:"Description"  %>
+        <%= f.input :photo, as: :file, label:"Photo de l'activité"  %>
+        <%= f.submit "Ajouter une activité", class:"btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

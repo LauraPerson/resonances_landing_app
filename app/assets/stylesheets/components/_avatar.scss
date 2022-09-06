@@ -53,6 +53,13 @@
   background-position: center;
 }
 
+.avatar-bordered-primary {
+  border: 2px solid $color-primary;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+}
+
 .avatar-worker {
   width: 200px;
   height: 200px;

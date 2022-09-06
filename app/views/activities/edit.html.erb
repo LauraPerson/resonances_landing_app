@@ -1,0 +1,13 @@
+<h1>Activities#edit</h1>
+<div class="container">
+  <div class="row flex-center">
+    <div class="col-12 col-m-6 col-xl-4 my-4">
+      <%= simple_form_for @activité, url: activité_path(@activité) do |f| %>
+        <%= f.input :title, label:"Titre"%>
+        <%= f.input :description, as: :rich_text_area, label:"Contenu" %>
+        <%= f.input :photo, as: :file, label:"Photo" %>
+        <%= f.submit "Modifier l'activité", class:"btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
