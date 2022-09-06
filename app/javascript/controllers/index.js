@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import AutoplayController from "./autoplay_controller"
+application.register("autoplay", AutoplayController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

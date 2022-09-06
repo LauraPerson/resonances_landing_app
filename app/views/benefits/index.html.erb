@@ -1,0 +1,44 @@
+<div class="container d-flex flex-column align-items-center ">
+  <div class="d-flex justify-content-between w-100 border-bottom" >
+    <% if current_user %>
+      <h1 class=" ">Dashboard</h1>
+      <div class="d-flex">
+        <h3>#Avantages</h3>
+        <%= link_to new_benefit_path do %>
+          <div class="btn-primary mx-2">
+            <i class="fa-solid fa-circle-plus"></i>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <% unless @benefits.nil? %>
+    <div class="cards">
+      <% @benefits.each do |benefit| %>
+        <div class="d-flex align-items-center justify-content-between my-2">
+          <div class="card-gnl card-20 card-hover">
+            <div>
+              <div class="photo_article_index"><%= photo(benefit) %></div>
+              <div class="d-flex justify-content-between my-2">
+                <div >
+                  <p><%= benefit.title %></p>
+                </div>
+                <% if current_user %>
+                  <div class="mx-1">
+                    <%= link_to edit_benefit_path(benefit) do %>
+                      <i class="fa-solid fa-pen-to-square mx-2 edit-destroy-links "></i>
+                    <% end %>
+                    <%= link_to benefit_path(benefit), data: {turbo_method: :delete} do %>
+                      <i class="fa-solid fa-trash edit-destroy-links"></i>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+

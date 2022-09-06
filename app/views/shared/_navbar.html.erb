@@ -13,6 +13,7 @@
         <% if user_signed_in? %>
           <%= link_to dashboard_path(current_user), class: "avatar" do %>
             <%= avatar(current_user) %>
+            
           <% end %>
         <% else %>
           <li class="nav-item">
@@ -23,3 +24,5 @@
     </div>
   </div>
 </div>
+
+

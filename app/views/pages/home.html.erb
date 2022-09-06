@@ -5,11 +5,80 @@
   </div>
 </div>
 <div class="container">
-  <div id="video">
-    <iframe class="iframe border radius" src="https://www.youtube.com/embed/hVmzj3Ss9Qo" title="YouTube video player"
+
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <% @concepts.each_with_index do | concept, index | %>
+        <div class="carousel-item <%= "active" if index == 0  %>" >
+          <p class="d-block" alt="..."><%= concept.description %></p>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+
+
+
+  <div id="video" data-controller="autoplay">
+    <iframe class="iframe radius" src="https://www.youtube.com/embed/hVmzj3Ss9Qo?autoplay=1&mute=1" title="YouTube video player"
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
     picture-in-picture" allowfullscreen></iframe>
   </div>
+
+  <h1 class="border-bottom title-section">Nos Activités</h1>
+  <div class="activity-grid">
+    <% @activities.each do |activity| %>
+      <div class="grid-activity-item">
+        <%= cl_image_tag activity.photo.key %>
+        <div>
+          <h3><%= activity.title %></h3>
+          <p><%= activity.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <h1 class="border-bottom title-section">Nos Avantages</h1>
+    <div class="benefit-container">
+      <% Benefit.all.each_with_index do |benefit, index| %>
+        <% if index.even? %>
+          <div class="benefit-card">
+            <%= photo(benefit) %>
+            <div>
+              <h3><%= benefit.title %></h3>
+              <p><%= benefit.description %></p>
+            </div>
+          </div>
+        <% else %>
+          <div class="benefit-card benefit-card-right">
+            <div>
+              <h3><%= benefit.title %></h3>
+              <p><%= benefit.description %></p>
+            </div>
+            <%= photo(benefit) %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+<%# for small devices --> code à revoir %>
+    <div class="benefit-container-xs">
+      <% Benefit.all.each_with_index do |benefit, index| %>
+          <div class="benefit-card">
+            <div>
+              <h3><%= benefit.title %></h3>
+              <%= photo(benefit) %>
+            </div>
+              <p><%= benefit.description %></p>
+          </div>
+      <% end %>
+    </div>
+<%# til here %>
+
+
+
+
 
 
   <h1 class="border-bottom title-section">L'équipe</h1>
@@ -17,19 +86,37 @@
   <div class="wrapper">
     <% @workers.each do |worker| %>
       <% if worker.photo.attached? %>
-        <div class="avatar-worker" style="background-image: url('<%= cl_image_path worker.photo.key %>')">
-          <div class="avatar-infos">
-            <%= worker.name %><br><%= worker.job %>
+        <div class='d-flex flex-column justify-content-center align-items-center'>
+          <div class="avatar-bordered-primary">
+            <div class="avatar-worker" style="background-image: url('<%= cl_image_path worker.photo.key %>')">
+              <div class="avatar-infos">
+                <%= worker.name %><br><%= worker.job %>
+              </div>
+            </div>
+          </div>
+          <div class="text-center my-2">
+            <h3><%= worker.name %></h3>
+            <p><%= worker.job %></p>
           </div>
         </div>
 
       <% else %>
-        <div class="avatar-worker" style="background-image: url('<%= image_path 'default.png' %>')">
-          <div class="avatar-infos">
-            <p><strong><%= worker.name %></strong></p>
-            <p><%= worker.job %></p>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div class="avatar-bordered-primary">
+            <div class="avatar-worker" style="background-image: url('<%= image_path 'default.png' %>')">
+              <div class="avatar-infos">
+                <p><strong><%= worker.name %></strong></p>
+                <p><%= worker.job %></p>
+              </div>
+            </div>
           </div>
+
+            <div class='text-center my-2'>
+              <h3><%= worker.name %></h3>
+              <p><%= worker.job %></p>
+            </div>
         </div>
+        
       <% end %>
     <% end %>
   </div>
@@ -41,7 +128,15 @@
     </div>
     <% end %>
   </div>
-  <h1 class="border-bottom title-section">Nos Articles</h1>
+  <div class="d-flex border-bottom title-section justify-content-between align-items-center">
+    <h1 class="">Nos Articles</h1>
+    <%= link_to articles_path do %>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="m-0" id="all-article"> Voir tous nos articles</p>
+        <i class="fa-solid fa-arrow-right mx-1"></i>
+      </div>
+    <% end %>
+  </div>
   <div class="cards center-element my-3" id="cards-article-home">
     <% @last_articles.each do |article| %>
     <%= link_to article_path(article) do %>

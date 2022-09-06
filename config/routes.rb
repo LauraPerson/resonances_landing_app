@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
+  get 'activities/edit'
+  get 'activities/index'
+  get 'activities/new'
+  get 'concepts/new'
+  get 'concepts/edit'
 
   resources :dashboard, :controller => 'users', only: [:show, :edit, :update]
   resources :terms, only: [:edit, :update]
   resources :workers
   resources :clients
   resources :articles
+  resources :concepts
+  resources :activities
+  resources :benefits
+
 
   resources :contacts, only: [:new, :create]
 

@@ -1,0 +1,12 @@
+<h1>Concepts#edit</h1>
+<div class="container">
+  <div class="row flex-center">
+    <div class="col-12 col-m-6 col-xl-4 my-4">
+      <%= simple_form_for @concept, url: concept_path(@concept) do |f| %>
+        <%= f.input :description, as: :rich_text_area, label:"Contenu" %>
+        <%= f.input :photo, as: :file, label:"Photo" %>
+        <%= f.submit "Modifier mon concept", class:"btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,7 @@
 @import "pages/index";
 
 body {
-  background-color: $rdark;
+  background-color: black;
   color: white;
   padding-bottom: 3vh;
 }
@@ -26,6 +26,10 @@ h1, h2, h3 {
 
 a {
   color: white;
+  &:hover {
+    color: $color-primary;
+
+  }
 }
 
 
