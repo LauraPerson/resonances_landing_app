@@ -41,7 +41,7 @@
   </div>
 
   <h1 class="border-bottom title-section">Nos Avantages</h1>
-    <div>
+    <div class="benefit-container">
       <% Benefit.all.each_with_index do |benefit, index| %>
         <% if index.even? %>
           <div class="benefit-card">
@@ -62,6 +62,19 @@
         <% end %>
       <% end %>
     </div>
+<%# for small devices --> code à revoir %>
+    <div class="benefit-container-xs">
+      <% Benefit.all.each_with_index do |benefit, index| %>
+          <div class="benefit-card">
+            <div>
+              <h3><%= benefit.title %></h3>
+              <%= photo(benefit) %>
+            </div>
+              <p><%= benefit.description %></p>
+          </div>
+      <% end %>
+    </div>
+<%# til here %>
 
 
 

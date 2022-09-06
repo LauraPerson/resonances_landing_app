@@ -59,6 +59,10 @@
 
 /////////////////// Benefit 
 
+.benefit-container-xs {
+  display: none;
+}
+
 .benefit-card {
   align-items: center;
   display: flex;
@@ -156,7 +160,7 @@
 
 @media (max-width: 768px) {
   .iframe {
-    width: 50vw;
+    width: 90vw;
     min-height: 200px;
   }
 
@@ -168,6 +172,19 @@
   
   #all-article {
     display: none;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-activity-item {
+    width: 100%;
+    img {
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+    }
   }
 }
 
@@ -207,6 +224,17 @@
       width: 150px;
       object-fit: cover;
     }
+  }
+
+  .benefit-container-xs {
+    display: block;
+    h3 {
+      margin: 20px 0px;
+    }
+  }
+
+  .benefit-container {
+    display: none;
   }
 
   .benefit-card {
