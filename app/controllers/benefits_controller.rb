@@ -1,7 +1,7 @@
 class BenefitsController < ApplicationController
 
     def index 
-      @benefits = Concept.all
+      @benefits = Benefit.all
     end
     
     def new
@@ -46,7 +46,7 @@ class BenefitsController < ApplicationController
   
     private 
   
-    def concept_params
+    def benefit_params
       params.require(:benefit).permit(:title, :description, :photo)
     end
   

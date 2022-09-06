@@ -12,6 +12,6 @@ class PagesController < ApplicationController
     @workers = Worker.all
     @concepts = Concept.all
     @activities = Activity.all
-
+    @benefits = Benefit.all
   end
 end

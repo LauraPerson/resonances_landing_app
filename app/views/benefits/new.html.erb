@@ -2,7 +2,7 @@
   <div class="row flex-center">
     <div class="col-12 col-m-6 col-xl-4 my-4">
       <h2>Ajouter un nouvel avatage</h2>
-      <%= simple_form_for @concept, url: benefits_path, method: :post do |f| %>
+      <%= simple_form_for @benefit, url: benefits_path, method: :post do |f| %>
         <%= f.input :title, label: "Titre" %>
         <%= f.input :description, as: :rich_text_area, label:"Description"  %>
         <%= f.input :photo, as: :file, label:"Photo de l'avantage"  %>
