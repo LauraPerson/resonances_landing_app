@@ -30,7 +30,7 @@
 
 .card-20 {
   text-align: left;
-  width: 20vw;
+  width: 100%;
   height: 30vh;
   overflow: hidden;
   .photo_article_index img {
@@ -76,7 +76,7 @@
 }
 
 #cards-article-home {
-  width: 75%;
+  width: 100%;
 }
 
 .card-article-home:hover {
@@ -105,8 +105,8 @@
   }
   
   .card-20 {
-    width: 40vw;
-    height: 35vh;
+    width: 100%;
+    height: 25vh;
   }
 
   #cards-article-home {
@@ -122,12 +122,12 @@
   }
 
   .card-30 {
-    width: 90vw;
+    width: 100%;
   }
   
   .card-20 {
-    width: 90vw;
-    height: 35vh;
+    width: 100%;
+    height: 25vh;
   }
 
   #cards-article-home {

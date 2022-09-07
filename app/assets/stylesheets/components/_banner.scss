@@ -1,5 +1,4 @@
 .banner {
-
   background-image: url('background2.png');
   height: 150vh;
   background-size: cover;
@@ -28,33 +27,46 @@
 
 @media screen and (max-width : 1024px) {
   .banner {
-    height: 100vh;
-    background: transparent;
+    height: 150vh;
+    // background: transparent;
     flex-direction: column;
     justify-content: center;
+    background-position: center;
   }
 }
 
 @media screen and (max-width : 736px) {
   .banner {
-    height: 100vh;
-    background: transparent;
+    height: 150vh;
+    // background: transparent;
     flex-direction: column;
     justify-content: center;
+    background-position: center;
+
   }
 }
 
 
 @media screen and (max-width : 667px) {
   .banner {
-    height: 100vh;
-    background: transparent;
+    height: 150vh;
+    // background: transparent;
     flex-direction: column;
     justify-content: center;
+    background-position: center;
+
   }
 }
 
 @media screen and (max-width : 568px) {
+  .banner {
+    height: 150vh;
+    // background: transparent;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center;
+  }
+  
   .banner #logo {
     width: 200px;
   }
