@@ -1,13 +1,13 @@
 .banner {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-image: url('background.png');
-  height: 100vh;
+
+  background-image: url('background2.png');
+  height: 150vh;
   background-size: cover;
+  background-repeat: no-repeat;
   top: 0;
   z-index: -1;
-  width: 100%;
+  width: 100vw;
+  padding-top: 20vh;
 }
 
 .banner-text {
