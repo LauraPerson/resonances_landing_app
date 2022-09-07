@@ -151,9 +151,10 @@
   <%= render 'form' %>
 
   <div class="terms">
-    <% unless @terms.nil?  %>
+    <% unless @terms.first.nil?  %>
       <%= @terms.first.content %>
     <% end %>
   </div>
+  <% console %>
 </div>
 
