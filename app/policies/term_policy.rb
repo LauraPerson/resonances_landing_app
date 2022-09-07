@@ -6,6 +6,14 @@ class TermPolicy < ApplicationPolicy
     # end
   end
 
+  def new?
+    true
+  end
+
+  def destroy? 
+    user == user
+  end
+
   def edit?
     user == user
   end

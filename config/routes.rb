@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'concepts/edit'
 
   resources :dashboard, :controller => 'users', only: [:show, :edit, :update]
-  resources :terms, only: [:edit, :update]
+  resources :terms
   resources :workers
   resources :clients
   resources :articles

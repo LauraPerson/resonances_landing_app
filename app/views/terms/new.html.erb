@@ -1,0 +1,7 @@
+  <div class="container">
+  <h1>Mentions légales</h1>
+    <%= simple_form_for @term, url: terms_path, method: :post do |f| %>
+      <%= f.input :content, label:"Contenu des mentions légales" %>
+      <%= f.submit "Modifier les mentions légales", class:"btn-primary" %>
+    <% end %>
+  </div>
