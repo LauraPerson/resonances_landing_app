@@ -152,7 +152,9 @@
 
   <div class="terms">
     <% unless @terms.first.nil?  %>
-      <%= @terms.first.content %>
+      <% @terms.each do |term| %>
+        <%= term.content %><br>
+      <% end %>
     <% end %>
   </div>
 </div>
