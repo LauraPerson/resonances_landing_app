@@ -8,7 +8,15 @@ class TermsController < ApplicationController
   def new
     @term = Term.new
     authorize @term
+  end
 
+  def create
+    @term = Term.new(term_params)
+    @term.save 
+    flash.alert = "Nouvelle mention légale ajoutée"
+    authorize @term
+
+    redirect_to terms_path
   end
 
 
