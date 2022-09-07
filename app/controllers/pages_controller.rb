@@ -13,5 +13,6 @@ class PagesController < ApplicationController
     @concepts = Concept.all
     @activities = Activity.all
     @benefits = Benefit.all
+    @terms = Term.all
   end
 end
