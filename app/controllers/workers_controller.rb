@@ -50,7 +50,7 @@ class WorkersController < ApplicationController
   private 
 
   def worker_params
-    params.require(:worker).permit(:name, :job, :link, :photo)
+    params.require(:worker).permit(:name, :job, :link, :order, :photo)
   end
 
 end
