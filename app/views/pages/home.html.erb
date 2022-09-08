@@ -11,7 +11,7 @@
         <% @concepts.each_with_index do | concept, index | %>
           <div class="carousel-item <%= "active" if index == 0  %>" >
             <div class="d-flex">
-              <%= cl_image_tag concept.photo.key, class:'bordered' %>
+              <%= cl_image_tag concept.photo.key %>
               <p class="d-block" alt="..."><%= concept.description %></p>
             </div>
           </div>
