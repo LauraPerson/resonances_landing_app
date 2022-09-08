@@ -5,14 +5,19 @@
     <h1 id="header">Le coeur de l'intelligence collective.</h1>
   </div>
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <% @concepts.each_with_index do | concept, index | %>
-        <div class="carousel-item <%= "active" if index == 0  %>" >
-          <p class="d-block" alt="..."><%= concept.description %></p>
-        </div>
-      <% end %>
+  <div class="container">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <% @concepts.each_with_index do | concept, index | %>
+          <div class="carousel-item <%= "active" if index == 0  %>" >
+            <div class="d-flex">
+              <%= cl_image_tag concept.photo.key, class:'bordered' %>
+              <p class="d-block" alt="..."><%= concept.description %></p>
+            </div>
+          </div>
+        <% end %>
 
+      </div>
     </div>
   </div>
 </div>
